@@ -16,8 +16,8 @@ def download_repo(repo):
         print(f"Already downloaded {repo}")
 
 with open('github_repositories.csv', 'r') as f:
-    csv_reader = csv.reader(f)
-    repositories = list(map(tuple, csv_reader))
+    csv_reader = csv.read(f)
+    repositories = list(map(tuple, csv))
 
 if 'output' not in os.listdir():
     os.makedirs('output')
